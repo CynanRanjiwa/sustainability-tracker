@@ -17,3 +17,14 @@ app.register_blueprint(auth_bp)
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    """
+
+    Explanation:
+
+    We initialize the Flask app and load configurations from config.py.
+    SQLAlchemy is used to interact with the PostgreSQL database.
+    JWTManager is initialized for handling JSON Web Token authentication.
+    The routes (authentication, in this case) are imported and registered.
+
+    """
