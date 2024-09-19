@@ -43,3 +43,12 @@ def login():
 # Run the app
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+"""
+
+Explanation:
+
+Flask App: This initializes the app and database.
+Registration & Login: Two routes handle user registration and login, storing passwords securely with hashing.
+"""
