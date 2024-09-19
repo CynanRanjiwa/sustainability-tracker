@@ -1,9 +1,9 @@
+# config.py
+
 import os
 
 class Config:
-    # Secret key for signing JWT tokens
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'super-secret-key'
-    
-    # PostgreSQL database connection
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'postgresql://username:password@localhost/sustainability_tracker_db'
+    SECRET_KEY = os.getenv('SECRET_KEY', 'mysecretkey')  # For JWT secret key
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')  # Database connection
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY', 'anothersecretkey')  # For JWT tokens
